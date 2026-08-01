@@ -4,7 +4,7 @@ id:1,
 name:"Noise Smart Watch",
 price:"₹1,499",
 oldPrice:"₹3,999",
-image:"https://via.placeholder.com/250x250?text=Smart+Watch"
+image:"earbrds.jpg"
 },
 {
 id:2,
