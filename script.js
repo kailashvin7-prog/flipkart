@@ -25,7 +25,7 @@ id:4,
 name:"Power Bank",
 price:"₹1,199",
 oldPrice:"₹2,499",
-image:"https://via.placeholder.com/250x250?text=Power+Bank"
+image:"powerbank.jpg"
 }
 ];
 
