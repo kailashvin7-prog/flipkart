@@ -35,7 +35,7 @@ if(!box) return;
 
 products.forEach((p)=>{
 box.innerHTML+=`
-<div class="card" onclick="location.href='product.html?id=${p.id}'">
+<div class="card" onclick="location.href='address.html?id=${p.id}'"
 <img src="${p.image}">
 <div class="title">${p.name}</div>
 <div class="price">${p.price}</div>
