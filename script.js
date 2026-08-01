@@ -1,7 +1,7 @@
 const products = [
 {
 id:1,
-name:"Noise Smart Watch",
+name:"Boat earburds",
 price:"₹1,499",
 oldPrice:"₹3,999",
 image:"earbrds.jpg"
