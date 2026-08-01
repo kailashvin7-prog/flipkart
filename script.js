@@ -23,7 +23,7 @@ image:"https://via.placeholder.com/250x250?text=Speaker"
 {
 id:4,
 name:"Power Bank",
-price:"₹850",
+price:"₹900",
 oldPrice:"₹2,499",
 image:"powerbank.jpg"
 }
