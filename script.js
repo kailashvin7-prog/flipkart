@@ -1,9 +1,9 @@
 const products = [
   {
     id: 1,
-    name: "Boat earbuds",
-    price: "₹1,499",
-    oldPrice: "₹3,999",
+    name: "Apple pro 2 ",
+    price: "₹160",
+    oldPrice: "₹1450",
     image: "earbuds.jpg"
   },
   {
