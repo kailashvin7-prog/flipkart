@@ -17,8 +17,8 @@ const products = [
     id: 3,
     name: "Bluetooth Speaker",
     price: "₹799",
-    oldPrice: "₹1,999",
-    image: "https://via.placeholder.com/250x250?text=Speaker"
+    oldPrice: "₹280",
+    image: "speaker.jpg"
   },
   {
     id: 4,
