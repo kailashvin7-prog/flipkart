@@ -8,10 +8,10 @@ const products = [
   },
   {
     id: 2,
-    name: "Wireless Earbuds",
-    price: "₹999",
-    oldPrice: "₹2,499",
-    image: "https://via.placeholder.com/250x250?text=Earbuds"
+    name: "Smart watch",
+    price: "₹129",
+    oldPrice: "₹900",
+    image: "Smart watch.jpg"
   },
   {
     id: 3,
