@@ -4,7 +4,7 @@ id:1,
 name:"Boat earburds",
 price:"₹1,499",
 oldPrice:"₹3,999",
-image:"earbrds.jpg"
+image:"earbuds.jpg"
 },
 {
 id:2,
