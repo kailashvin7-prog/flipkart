@@ -60,11 +60,9 @@ margin-top:20px;
 
 <div class="card">
 
-<img src="earbrds.jpg">
+<div class="name" id="productName"></div>
 
-<div class="name">Wireless Earbuds</div>
-
-<div class="price">₹900</div>
+<div class="price" id="productPrice"></div>
 
 <p>Delivery Charges : <b>FREE</b></p>
 
@@ -77,6 +75,21 @@ Continue to Payment
 </button>
 
 </div>
+<script>
+const params = new URLSearchParams(location.search);
 
+const product = params.get("product") || "Product";
+const price = params.get("price") || "0";
+
+document.getElementById("productName").textContent = product;
+document.getElementById("productPrice").textContent = "₹" + price.replace("₹", "");
+
+document.querySelector(".total").textContent =
+  "Total : ₹" + price.replace("₹", "");
+
+document.querySelector("button").onclick = function(){
+  location.href = "payment.html" + location.search;
+};
+</script>
 </body>
 </html>
