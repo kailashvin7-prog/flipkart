@@ -23,7 +23,7 @@ const products = [
   {
     id: 4,
     name: "Power Bank",
-    price: "₹900",
+    price: "₹160",
     oldPrice: "₹2,499",
     image: "powerbank.jpg"
   }
