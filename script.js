@@ -2,14 +2,12 @@ let cartCount = 0;
 
 document.querySelectorAll(".product button").forEach(function(button, index){
 
-  button.addEventListener("click", function(){
-
+  
     cartCount++;
 
     document.querySelector(".cart span").innerText = cartCount;
 
-    alert("Product added to cart!");
-
+    
   });
 
 });
