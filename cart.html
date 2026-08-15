@@ -1,1 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>My Cart</title>
 
+<style>
+body{
+  margin:0;
+  font-family:Arial,sans-serif;
+  background:#f1f3f6;
+}
+
+.header{
+  background:#0877e8;
+  color:white;
+  padding:18px;
+  font-size:24px;
+  font-weight:bold;
+}
+
+.cartBox{
+  background:white;
+  margin:20px auto;
+  padding:25px;
+  max-width:800px;
+}
+
+h2{
+  margin-top:0;
+}
+
+.empty{
+  text-align:center;
+  padding:50px 10px;
+}
+
+.shop{
+  background:#ff6f00;
+  color:white;
+  border:0;
+  padding:12px 30px;
+  font-weight:bold;
+  cursor:pointer;
+}
+</style>
+
+</head>
+
+<body>
+
+<div class="header">
+  🛒 My Cart
+</div>
+
+<div class="cartBox">
+
+  <h2>My Cart</h2>
+
+  <div class="empty">
+
+    <h3>Your cart is ready</h3>
+
+    <p>Products that you add to cart will appear here.</p>
+
+    <button class="shop" onclick="location.href='index.html'">
+      Continue Shopping
+    </button>
+
+  </div>
+
+</div>
+
+</body>
+</html>
