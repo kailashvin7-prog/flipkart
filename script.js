@@ -1,49 +1,46 @@
-const products = [
-  {
-    id: 1,
-    name: "Apple pro 2 ",
-    price: "₹160",
-    oldPrice: "₹1450",
-    image: "earbuds.jpg"
-  },
-  {
-    id: 2,
-    name: "Smart watch",
-    price: "₹129",
-    oldPrice: "₹900",
-    image: "Smart watch.jpg"
-  },
-  {
-    id: 3,
-    name: "Bluetooth Speaker",
-    price: "₹299",
-    oldPrice: "₹1500",
-    image: "speaker.jpg"
-  },
-  {
-    id: 4,
-    name: "Power Bank",
-    price: "₹160",
-    oldPrice: "₹2,499",
-    image: "powerbank.jpg"
-  }
-];
+let cartCount = 0;
 
-function showProducts() {
-  const box = document.getElementById("products");
-  if (!box) return;
+document.querySelectorAll(".product button").forEach(function(button, index){
 
-  products.forEach((p) => {
-    box.innerHTML += `
-      <div class="card" onclick="location.href='address.html?id=${p.id}'">
-        <img src="${p.image}">
-        <div class="title">${p.name}</div>
-        <div class="price">${p.price}</div>
-        <div class="old">${p.oldPrice}</div>
-        <button>Buy Now</button>
-      </div>
-    `;
+  button.addEventListener("click", function(){
+
+    cartCount++;
+
+    document.querySelector(".cart span").innerText = cartCount;
+
+    alert("Product added to cart!");
+
   });
-}
 
-window.onload = showProducts;
+});
+
+
+document.querySelector(".cart").addEventListener("click", function(){
+
+  alert("Cart में " + cartCount + " product है।");
+
+});
+
+
+document.querySelector(".search input").addEventListener("input", function(){
+
+  let searchText = this.value.toLowerCase();
+
+  document.querySelectorAll(".product").forEach(function(product){
+
+    let productName =
+      product.querySelector("h3").innerText.toLowerCase();
+
+    if(productName.includes(searchText)){
+
+      product.style.display = "";
+
+    }else{
+
+      product.style.display = "none";
+
+    }
+
+  });
+
+});
