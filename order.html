@@ -83,7 +83,7 @@ margin-top:20px;
 
 <div class="total" id="total"></div>
 
-<button id="paymentButton">
+<button onclick="window.location.href='address.html'">
 Continue to Address
 </button>
 
@@ -122,10 +122,7 @@ if(product){
         product.image;
 
     // Payment page
-    document.getElementById("paymentButton").onclick = function(){
-        window.location.href = "address.html" + window.location.search;
-    };
-
+    
 }else{
 
     document.getElementById("productName").textContent =
