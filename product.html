@@ -117,6 +117,25 @@ Buy Now
 </div>
 
 </div>
+<script>
+let time = 299;
 
+setInterval(function(){
+
+let minutes = Math.floor(time / 60);
+let seconds = time % 60;
+
+document.getElementById("countdown").innerHTML =
+minutes + ":" + (seconds < 10 ? "0" : "") + seconds;
+
+if(time > 0){
+time--;
+}
+
+},1000);
+</script>
+
+</body>
+</html>
 </body>
 </html>
