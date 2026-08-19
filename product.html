@@ -1,1 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+<title>Smart Watch</title>
+
+<style>
+body{
+margin:0;
+font-family:Arial,sans-serif;
+background:#f1f3f6;
+}
+
+.product{
+background:white;
+max-width:500px;
+margin:auto;
+padding:15px;
+}
+
+.product img{
+width:100%;
+height:auto;
+}
+
+h2{
+font-size:24px;
+margin-top:15px;
+}
+
+.price{
+font-size:28px;
+font-weight:bold;
+margin-top:10px;
+}
+
+.old{
+text-decoration:line-through;
+color:gray;
+}
+
+.discount{
+color:green;
+font-weight:bold;
+}
+
+.rating{
+background:green;
+color:white;
+display:inline-block;
+padding:4px 8px;
+border-radius:4px;
+margin-top:10px;
+}
+
+.buttons{
+display:flex;
+gap:10px;
+margin-top:20px;
+}
+
+.cart{
+flex:1;
+background:#ff9f00;
+color:white;
+border:none;
+padding:15px;
+font-size:16px;
+font-weight:bold;
+}
+
+.buy{
+flex:1;
+background:#fb641b;
+color:white;
+border:none;
+padding:15px;
+font-size:16px;
+font-weight:bold;
+}
+</style>
+</head>
+
+<body>
+
+<div class="product">
+
+<img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=800">
+
+<h2>Smart Watch</h2>
+
+<div class="rating">4.5 ★</div>
+
+<p style="margin-top:10px;">
+<span class="old">₹3999</span>
+<span class="discount"> 94% OFF</span>
+</p>
+
+<div class="price">₹1499</div>
+
+<p>Free Delivery in Two Days</p>
+
+<div class="buttons">
+<button class="cart">Add to Cart</button>
+
+<button class="buy"
+onclick="window.location.href='order.html'">
+Buy Now
+</button>
+</div>
+
+</div>
+
+</body>
+</html>
