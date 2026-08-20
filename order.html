@@ -139,8 +139,8 @@ margin-top:20px;
 <div class="card">
 <div style="background:#f5f5f5;padding:10px;margin-bottom:15px;border-radius:5px;">
   <b>Delivered to:</b><br>
-  Customer Name<br>
-  Address will appear here
+  <span id="customerName"></span><br>
+  <span id="customerAddress"></span>
 </div>
 <img id="productImage" class="product-image" src="" alt="Product">
 
@@ -170,7 +170,13 @@ const params = new URLSearchParams(window.location.search);
 const productId = Number(params.get("id"));
 
 const product = products.find(p => p.id === productId);
+document.getElementById("customerName").textContent =
+localStorage.getItem("name") || "";
 
+document.getElementById("customerAddress").textContent =
+(localStorage.getItem("city") || "") + " - " +
+(localStorage.getItem("pincode") || "") + ", " +
+(localStorage.getItem("state") || "");
 if(product){
 
     // Product Name
