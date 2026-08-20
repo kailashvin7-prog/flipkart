@@ -260,8 +260,8 @@ localStorage.setItem("pincode",document.getElementById("pincode").value);
 localStorage.setItem("city",document.getElementById("city").value);
 localStorage.setItem("state",document.getElementById("state").value);
 
-window.location.href="order.html";
-
+window.location.href =
+"order.html" + window.location.search;
 }
 </script>
 
