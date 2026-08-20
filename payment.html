@@ -10,124 +10,72 @@ body{
 margin:0;
 font-family:Arial,sans-serif;
 background:#f1f3f6;
+padding-bottom:80px;
 }
 
 .header{
 background:white;
 padding:15px;
-font-size:16px;
-font-weight:bold;
 border-bottom:1px solid #ddd;
-}
-
-.step{
-font-size:30px;
-margin-right:10px;
+font-weight:bold;
+font-size:18px;
 }
 
 .card{
-background:#fff;
+background:white;
 margin:12px;
 padding:15px;
 border-radius:10px;
 }
 
-.product{
-display:flex;
-align-items:center;
-gap:15px;
-}
-
-.product img{
-width:70px;
-height:70px;
-object-fit:contain;
-border:1px solid #ddd;
-border-radius:6px;
-}
-
-.product-name{
-font-size:18px;
-font-weight:bold;
-}
-
 .price{
-color:#2874f0;
-font-size:28px;
+font-size:30px;
 font-weight:bold;
-margin-top:5px;
+color:#2874f0;
 }
 
 .cashback{
 background:#e8f7ea;
 border:1px solid #bde5c3;
 margin:12px;
-padding:18px;
-border-radius:12px;
-font-size:18px;
-font-weight:bold;
+padding:15px;
+border-radius:10px;
 color:#1b7f3b;
+font-weight:bold;
 }
 
 .section{
 background:white;
-margin-top:10px;
+margin:12px;
 padding:15px;
-font-size:24px;
+font-size:20px;
 font-weight:bold;
+border-radius:10px;
 }
 
 .option{
 background:white;
-margin:10px 12px;
-padding:18px;
-border:2px solid #ddd;
-border-radius:12px;
-font-size:24px;
+margin:12px;
+padding:15px;
+border-radius:10px;
 display:flex;
 justify-content:space-between;
 align-items:center;
-}
-
-.option input{
-width:24px;
-height:24px;
+border:1px solid #ddd;
+font-size:18px;
 }
 
 .paybtn{
 position:fixed;
-bottom:0;
 left:0;
+bottom:0;
 width:100%;
 padding:18px;
-border:none;
 background:#fb641b;
 color:white;
-font-size:24px;
+border:none;
+font-size:22px;
 font-weight:bold;
-}
-
-@media(max-width:600px){
-
-.product-name{
-font-size:16px;
-}
-
-.price{
-font-size:18px;
-}
-
-.section{
-font-size:20px;
-}
-
-.option{
-font-size:18px;
-}
-
-.paybtn{
-font-size:20px;
-}
 }
 </style>
 </head>
@@ -135,12 +83,48 @@ font-size:20px;
 <body>
 
 <div class="header">
-← STEP 3 OF 3<br>
-<span style="font-size:32px;">Payments</span>
+STEP 3 OF 3<br>
+Payments
 </div>
 
 <div class="card">
+<h2>Bluetooth Speaker</h2>
+<div class="price">₹99</div>
+</div>
 
-<div class="product">
+<div class="cashback">
+95% Cashback Available
+</div>
 
-<img id="product
+<div class="section">
+UPI Payment
+</div>
+
+<div class="option">
+<span>📱 PhonePe</span>
+<input type="radio" name="upi" checked>
+</div>
+
+<div class="option">
+<span>💙 Paytm</span>
+<input type="radio" name="upi">
+</div>
+
+<div class="option">
+<span>🔳 Scan QR Code</span>
+<input type="radio" name="upi">
+</div>
+
+<button class="paybtn" onclick="payNow()">
+Pay ₹99
+</button>
+
+<script>
+function payNow(){
+alert("Payment Successful");
+window.location.href="thankyou.html";
+}
+</script>
+
+</body>
+</html>
