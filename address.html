@@ -246,12 +246,26 @@ placeholder="Road name, Area, Colony"
 
   </div>
 
-  <button class="save"
-onclick="window.location.href='order.html'">
+  <button class="save" onclick="saveAddress()">
 Save Address
 </button>
-
+</div>
 </div>
 
+<script>
+function saveAddress(){
+
+localStorage.setItem("name",document.getElementById("name").value);
+localStorage.setItem("pincode",document.getElementById("pincode").value);
+localStorage.setItem("city",document.getElementById("city").value);
+localStorage.setItem("state",document.getElementById("state").value);
+
+window.location.href="order.html";
+
+}
+</script>
+
+</body>
+</html>
 </body>
 </html>
