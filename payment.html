@@ -1,99 +1,146 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Payment</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Payments</title>
 
 <style>
 body{
-font-family:Arial;
-background:#f1f3f6;
 margin:0;
+font-family:Arial,sans-serif;
+background:#f1f3f6;
 }
 
 .header{
-background:#2874f0;
-color:white;
+background:white;
 padding:15px;
-font-size:22px;
+font-size:16px;
+font-weight:bold;
+border-bottom:1px solid #ddd;
+}
+
+.step{
+font-size:30px;
+margin-right:10px;
+}
+
+.card{
+background:#fff;
+margin:12px;
+padding:15px;
+border-radius:10px;
+}
+
+.product{
+display:flex;
+align-items:center;
+gap:15px;
+}
+
+.product img{
+width:70px;
+height:70px;
+object-fit:contain;
+border:1px solid #ddd;
+border-radius:6px;
+}
+
+.product-name{
+font-size:18px;
 font-weight:bold;
 }
 
-.box{
+.price{
+color:#2874f0;
+font-size:28px;
+font-weight:bold;
+margin-top:5px;
+}
+
+.cashback{
+background:#e8f7ea;
+border:1px solid #bde5c3;
+margin:12px;
+padding:18px;
+border-radius:12px;
+font-size:18px;
+font-weight:bold;
+color:#1b7f3b;
+}
+
+.section{
 background:white;
-margin:15px;
+margin-top:10px;
 padding:15px;
-border-radius:8px;
+font-size:24px;
+font-weight:bold;
 }
 
 .option{
-padding:15px;
-border-bottom:1px solid #ddd;
-font-size:18px;
+background:white;
+margin:10px 12px;
+padding:18px;
+border:2px solid #ddd;
+border-radius:12px;
+font-size:24px;
+display:flex;
+justify-content:space-between;
+align-items:center;
 }
 
-.amount{
-font-size:22px;
-font-weight:bold;
-margin-top:20px;
+.option input{
+width:24px;
+height:24px;
 }
 
-button{
+.paybtn{
+position:fixed;
+bottom:0;
+left:0;
 width:100%;
-padding:15px;
+padding:18px;
+border:none;
 background:#fb641b;
 color:white;
+font-size:24px;
+font-weight:bold;
+}
+
+@media(max-width:600px){
+
+.product-name{
+font-size:16px;
+}
+
+.price{
 font-size:18px;
-border:none;
-border-radius:5px;
-margin-top:20px;
+}
+
+.section{
+font-size:20px;
+}
+
+.option{
+font-size:18px;
+}
+
+.paybtn{
+font-size:20px;
+}
 }
 </style>
 </head>
 
 <body>
 
-<div class="header">Payment</div>
-
-<div class="box">
-
-<div class="option">📱 UPI Payment</div>
-
-<div class="amount" id="amount">
-Amount: ₹299
+<div class="header">
+← STEP 3 OF 3<br>
+<span style="font-size:32px;">Payments</span>
 </div>
 
-<button id="payButton">
-Pay Now
-</button>
+<div class="card">
 
-</div>
+<div class="product">
 
-<script>
-
-const params = new URLSearchParams(window.location.search);
-
-// Agar amount URL se aaya hai to use karega
-let amount = params.get("amount") || "299";
-
-const upiId = "75687358@ybl";
-
-document.getElementById("amount").textContent =
-"Amount: ₹" + amount;
-
-document.getElementById("payButton").onclick = function(){
-
-    const upiLink =
-    "upi://pay" +
-    "?pa=" + encodeURIComponent(upiId) +
-    "&pn=" + encodeURIComponent("My Store") +
-    "&am=" + encodeURIComponent(amount) +
-    "&cu=INR";
-
-    window.location.href = upiLink;
-};
-
-</script>
-
-</body>
-</html>
+<img id="product
