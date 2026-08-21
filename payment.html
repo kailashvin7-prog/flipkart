@@ -33,7 +33,49 @@ font-size:30px;
 font-weight:bold;
 color:#2874f0;
 }
+.productSummary{
+background:white;
+margin:12px;
+padding:15px;
+border-radius:10px;
+display:flex;
+align-items:center;
+gap:15px;
+}
 
+.productSummary img{
+width:110px;
+height:110px;
+object-fit:contain;
+border-radius:8px;
+background:white;
+}
+
+.productInfo{
+flex:1;
+}
+
+.productInfo h2{
+margin:0 0 10px;
+font-size:20px;
+font-weight:500;
+}
+
+.productPrice{
+font-size:24px;
+font-weight:bold;
+color:#2874f0;
+}
+
+.totalRow{
+margin-top:15px;
+padding-top:12px;
+border-top:1px solid #eee;
+display:flex;
+justify-content:space-between;
+font-size:18px;
+font-weight:bold;
+}
 .cashback{
 background:#e8f7ea;
 border:1px solid #bde5c3;
@@ -87,11 +129,21 @@ STEP 3 OF 3<br>
 Payments
 </div>
 
-<div class="card">
-<h2>Power Bank</h2>
-<div class="price">₹1499</div>
-</div>
+<div class="card productSummary">
 
+  <img src="powerbank.jpg" alt="Power Bank">
+
+  <div class="productInfo">
+    <h2>Power Bank</h2>
+    <div class="productPrice">₹1499</div>
+
+    <div class="totalRow">
+      <span>Total Amount</span>
+      <span>₹1499</span>
+    </div>
+  </div>
+
+</div>
 <div class="cashback">
 95% Cashback Available
 </div>
