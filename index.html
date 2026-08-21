@@ -138,12 +138,33 @@ body{
   margin:10px auto;
   max-width:1250px;
   min-height:190px;
-  background:linear-gradient(90deg,#2874f0,#6ab7ff);
+  background:white;
   display:flex;
   align-items:center;
   justify-content:center;
   text-align:center;
   color:white;
+  overflow:hidden;
+}
+
+.banner img{
+  width:100%;
+  height:auto;
+  display:block;
+}
+
+@media(max-width:600px){
+  .banner{
+    width:100%;
+    min-height:0;
+    margin:5px 0;
+  }
+
+  .banner img{
+    width:100%;
+    height:auto;
+    display:block;
+  }
 }
 
 .banner h1{
