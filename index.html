@@ -19,14 +19,11 @@ body{
   color:#222;
 }
 
-/* =========================
-   NEW TOP HEADER
-   ========================= */
-
+/* HEADER */
 .header{
   background:#2874f0;
+  padding:12px;
   color:white;
-  padding:10px 18px 12px;
 }
 
 .topbar{
@@ -34,35 +31,58 @@ body{
   margin:auto;
   display:flex;
   align-items:center;
-  gap:18px;
+  gap:15px;
 }
 
 .menu{
-  font-size:40px;
-  line-height:1;
-  width:55px;
-  text-align:center;
+  font-size:25px;
 }
 
 .logo{
-  min-width:220px;
+  min-width:110px;
 }
 
 .logo b{
-  font-size:35px;
+  font-size:22px;
   font-style:italic;
-  font-weight:bold;
 }
 
 .logo span{
   display:block;
-  font-size:16px;
-  margin-top:2px;
+  font-size:11px;
   color:#eee;
 }
 
 .logo strong{
   color:#ffe500;
+}
+
+.search{
+  flex:1;
+  background:white;
+  height:42px;
+  display:flex;
+  align-items:center;
+  padding:0 12px;
+  border-radius:2px;
+  color:#555;
+}
+
+.search input{
+  border:0;
+  outline:0;
+  width:100%;
+  font-size:14px;
+  margin-left:8px;
+}
+
+.login{
+  background:white;
+  color:#2874f0;
+  border:0;
+  padding:10px 25px;
+  font-weight:bold;
+  border-radius:2px;
 }
 
 .cartLink{
@@ -72,116 +92,82 @@ body{
 
 .cart{
   position:relative;
-  font-size:40px;
-  margin-left:auto;
-  width:65px;
-  text-align:center;
+  font-size:25px;
 }
 
 .cart span{
   position:absolute;
   top:-8px;
-  right:0px;
+  right:-10px;
   background:red;
   color:white;
   border-radius:50%;
-  font-size:16px;
-  width:30px;
-  height:30px;
+  font-size:11px;
+  width:18px;
+  height:18px;
   text-align:center;
-  line-height:30px;
+  line-height:18px;
 }
 
-/* SEARCH - SECOND LINE */
-
-.search{
-  max-width:1200px;
-  margin:12px auto 0;
-  background:white;
-  height:65px;
-  display:flex;
-  align-items:center;
-  padding:0 22px;
-  border-radius:4px;
-  color:#555;
-}
-
-.searchIcon{
-  font-size:35px;
-  margin-right:20px;
-}
-
-.search input{
-  border:0;
-  outline:0;
-  width:100%;
-  font-size:25px;
-  color:#555;
-}
-
-/* =========================
-   NEW CATEGORIES
-   ========================= */
-
+/* CATEGORY */
 .categories{
   background:white;
   display:flex;
-  justify-content:flex-start;
-  gap:65px;
-  padding:18px 25px 14px;
+  justify-content:center;
+  gap:45px;
+  padding:15px 10px;
   overflow-x:auto;
-  border-bottom:8px solid #d0d0d0;
-  scrollbar-width:none;
-}
-
-.categories::-webkit-scrollbar{
-  display:none;
 }
 
 .category{
   text-align:center;
-  min-width:155px;
-  flex-shrink:0;
+  min-width:70px;
 }
 
 .catIcon{
-  font-size:55px;
-  height:70px;
-  display:flex;
-  justify-content:center;
-  align-items:center;
+  font-size:28px;
 }
 
 .category p{
-  font-size:24px;
-  margin-top:8px;
-  white-space:nowrap;
+  font-size:13px;
+  margin-top:5px;
 }
 
-/* =========================
-   NEW BANNER
-   ========================= */
-
+/* BANNER */
 .banner{
-  margin:0 auto 10px;
-  width:100%;
+  margin:10px auto;
   max-width:1250px;
-  min-height:0;
-  background:white;
-  display:block;
-  overflow:hidden;
+  min-height:190px;
+  background:linear-gradient(90deg,#2874f0,#6ab7ff);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  color:white;
 }
 
-.banner img{
-  width:100%;
-  height:auto;
-  display:block;
+.banner h1{
+  font-size:34px;
 }
 
-/* =========================
-   SECTION
-   ========================= */
+.banner h2{
+  font-size:28px;
+  margin:5px;
+}
 
+.banner p{
+  margin:8px 0;
+}
+
+.banner button{
+  background:#ff9f00;
+  color:white;
+  border:0;
+  padding:11px 30px;
+  font-weight:bold;
+}
+
+/* SECTION */
 .section{
   max-width:1250px;
   margin:10px auto;
@@ -207,14 +193,12 @@ body{
 }
 
 /* PRODUCT GRID */
-
 .products{
   display:grid;
   grid-template-columns:repeat(4,1fr);
 }
 
 /* PRODUCT CARD */
-
 .product{
   background:white;
   border-right:1px solid #eee;
@@ -278,18 +262,16 @@ body{
   font-size:15px;
   color:#444;
 }
-
 .rating{
   display:inline-block;
-  background:#388e3c;
-  color:white;
-  padding:2px 6px;
-  border-radius:2px;
-  font-size:12px;
-  font-weight:500;
-  margin-top:6px;
+background:#388e3c;
+color:white;
+padding:2px 6px;
+border-radius:2px;
+font-size:12px;
+font-weight:500;
+margin-top:6px;
 }
-
 .product button{
   width:100%;
   border:0;
@@ -302,7 +284,6 @@ body{
 }
 
 /* FOOTER */
-
 footer{
   text-align:center;
   background:#172337;
@@ -311,105 +292,80 @@ footer{
   margin-top:20px;
 }
 
-/* =========================
-   MOBILE
-   ========================= */
-
+/* MOBILE */
 @media(max-width:600px){
 
   body{
     background:#f1f3f6;
   }
 
-  /* HEADER */
   .header{
-    padding:8px 10px 10px;
+    padding:8px;
   }
 
   .topbar{
-    gap:7px;
+    gap:8px;
   }
 
   .menu{
-    font-size:30px;
-    width:40px;
+    font-size:22px;
   }
 
   .logo{
     min-width:auto;
-    flex:1;
   }
 
   .logo b{
-    font-size:25px;
-  }
-
-  .logo span{
-    font-size:11px;
-  }
-
-  .cart{
-    font-size:30px;
-    width:45px;
-  }
-
-  .cart span{
-    width:22px;
-    height:22px;
-    line-height:22px;
-    font-size:12px;
-    top:-7px;
-  }
-
-  /* SEARCH */
-  .search{
-    height:55px;
-    margin-top:10px;
-    padding:0 14px;
-  }
-
-  .searchIcon{
-    font-size:28px;
-    margin-right:12px;
-  }
-
-  .search input{
     font-size:17px;
   }
 
-  /* CATEGORIES */
+  .logo span{
+    font-size:8px;
+  }
+
+  .search{
+    height:38px;
+  }
+
+  .search input{
+    font-size:11px;
+  }
+
+  .login{
+    display:none;
+  }
+
+  .cart{
+    font-size:23px;
+  }
+
   .categories{
     justify-content:flex-start;
-    gap:25px;
-    padding:12px 12px 10px;
-    border-bottom:7px solid #ccc;
+    gap:22px;
+    padding:10px;
   }
 
-  .category{
-    min-width:125px;
-  }
-
-  .catIcon{
-    font-size:43px;
-    height:55px;
-  }
-
-  .category p{
-    font-size:19px;
-    margin-top:5px;
-  }
-
-  /* BANNER */
   .banner{
+    min-height:130px;
     margin:5px 0;
   }
 
-  .banner img{
-    width:100%;
-    height:auto;
+  .banner h1{
+    font-size:23px;
   }
 
-  /* SECTION */
+  .banner h2{
+    font-size:20px;
+  }
+
+  .banner p{
+    font-size:12px;
+  }
+
+  .banner button{
+    padding:8px 20px;
+  }
+
   .section{
     margin:5px 0;
   }
@@ -473,15 +429,8 @@ footer{
 </head>
 
 <body>
-
-<!-- =========================
-     HEADER - CHANGED
-     ========================= -->
-
 <header class="header">
-
   <div class="topbar">
-
     <div class="menu">☰</div>
 
     <div class="logo">
@@ -489,28 +438,19 @@ footer{
       <span>Explore <strong>Plus ✦</strong></span>
     </div>
 
+    <div class="search">
+      🔍
+      <input type="text" placeholder="Search for Products, Brands and More">
+    </div>
+
     <div class="cart">
       🛒
       <span>1</span>
     </div>
-
   </div>
-
-  <div class="search">
-    <span class="searchIcon">🔍</span>
-    <input type="text"
-      placeholder="Search for Products, Brands and More">
-  </div>
-
 </header>
 
-
-<!-- =========================
-     CATEGORIES - CHANGED
-     ========================= -->
-
 <div class="categories">
-
   <div class="category">
     <div class="catIcon">🔵</div>
     <p>Categories</p>
@@ -535,27 +475,19 @@ footer{
     <div class="catIcon">💻</div>
     <p>Electronics</p>
   </div>
-
-  <div class="category">
-    <div class="catIcon">🏠</div>
-    <p>Appliances</p>
-  </div>
-
 </div>
-
-
-<!-- =========================
-     BANNER - CHANGED
-     ========================= -->
 
 <div class="banner">
-  <img src="big-bachat-banner.jpg" alt="Big Bachat Days">
+  <div>
+    <h1>BIG BACHAT DAYS</h1>
+    <h2>Hurry!</h2>
+    <p>Sale Ends Today</p>
+    <button>Shop Now</button>
+  </div>
 </div>
 
 
-<!-- =====================================================
-     YAHAN SE AAPKA PURANA CODE BILKUL SAME RAKHA HAI
-     ===================================================== -->
+
 
 
 <section class="section">
