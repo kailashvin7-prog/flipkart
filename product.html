@@ -135,27 +135,65 @@ Buy Now
 
 <script>
 
-/* Index.html se selected product lena */
+/* Product ID read karna */
 
-const savedProduct = localStorage.getItem("selectedProduct");
+const params = new URLSearchParams(window.location.search);
+const id = params.get("id");
 
-const product = savedProduct
-  ? JSON.parse(savedProduct)
-  : {
-      name: "Power Bank",
-      image: "powerbank.jpg",
-      price: "1499",
-      old: "3999",
-      discount: "94",
-      rating: "4.5"
-    };
 
-/* Product information */
+/* Products ki information */
+
+const products = {
+
+"1": {
+name: "Power Bank",
+image: "powerbank.jpg",
+price: "1499",
+old: "3999",
+discount: "94",
+rating: "4.5"
+},
+
+"2": {
+name: "Bluetooth Earbuds Pro 2",
+image: "airpodspro2.jpg",
+price: "160",
+old: "1999",
+discount: "60",
+rating: "4.5"
+},
+
+"3": {
+name: "Power Bank",
+image: "https://images.unsplash.com/photo-1609592424144-7a8c2d0b0d22?w=500",
+price: "1199",
+old: "2499",
+discount: "52",
+rating: "4.5"
+},
+
+"4": {
+name: "Wireless Earbuds",
+image: "https://images.unsplash.com/photo-1587033411391-5d9e51cce126?w=500",
+price: "999",
+old: "2499",
+discount: "60",
+rating: "4.5"
+}
+
+};
+
+
+/* Jo ID nahi hai to Product 1 */
+
+const product = products[id] || products["1"];
+
+
+/* Product information page par lagana */
 
 document.getElementById("productImage").src = product.image;
 
-document.getElementById("productName").innerText =
-product.name;
+document.getElementById("productName").innerText = product.name;
 
 document.getElementById("productPrice").innerText =
 "₹" + product.price;
@@ -178,18 +216,19 @@ let time = 299;
 
 setInterval(function(){
 
-  let minutes = Math.floor(time / 60);
-  let seconds = time % 60;
+let minutes = Math.floor(time / 60);
+let seconds = time % 60;
 
-  document.getElementById("countdown").innerHTML =
-    minutes + ":" + (seconds < 10 ? "0" : "") + seconds;
+document.getElementById("countdown").innerHTML =
+minutes + ":" + (seconds < 10 ? "0" : "") + seconds;
 
-  if(time > 0){
-    time--;
-  }
+if(time > 0){
+time--;
+}
 
 },1000);
 
 </script>
+
 </body>
 </html>
