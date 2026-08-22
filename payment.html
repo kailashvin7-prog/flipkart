@@ -28,11 +28,6 @@ padding:15px;
 border-radius:10px;
 }
 
-.price{
-font-size:30px;
-font-weight:bold;
-color:#2874f0;
-}
 .productSummary{
 background:white;
 margin:12px;
@@ -76,6 +71,7 @@ justify-content:space-between;
 font-size:18px;
 font-weight:bold;
 }
+
 .cashback{
 background:#e8f7ea;
 border:1px solid #bde5c3;
@@ -131,19 +127,25 @@ Payments
 
 <div class="card productSummary">
 
-  <img src="powerbank.jpg" alt="Power Bank">
+<img id="productImage" src="powerbank.jpg" alt="Product">
 
-  <div class="productInfo">
-    <h2>Power Bank</h2>
-    <div class="productPrice">₹1499</div>
+<div class="productInfo">
 
-    <div class="totalRow">
-      <span>Total Amount</span>
-      <span>₹1499</span>
-    </div>
-  </div>
+<h2 id="productName">Power Bank</h2>
+
+<div class="productPrice" id="productPrice">
+₹1499
+</div>
+
+<div class="totalRow">
+<span>Total Amount</span>
+<span id="totalAmount">₹1499</span>
+</div>
 
 </div>
+
+</div>
+
 <div class="cashback">
 95% Cashback Available
 </div>
@@ -154,7 +156,9 @@ UPI Payment
 
 <div class="option">
 <span>
-<img src="https://download.logo.wine/logo/PhonePe/PhonePe-Logo.wine.png" width="35" style="vertical-align:middle;margin-right:10px;">
+<img src="https://download.logo.wine/logo/PhonePe/PhonePe-Logo.wine.png"
+width="35"
+style="vertical-align:middle;margin-right:10px;">
 PhonePe
 </span>
 <input type="radio" name="upi" checked>
@@ -162,28 +166,66 @@ PhonePe
 
 <div class="option">
 <span>
-<img src="paytm/paytm.png" width="30" style="vertical-align:middle;margin-right:10px;">
+<img src="paytm/paytm.png"
+width="30"
+style="vertical-align:middle;margin-right:10px;">
 Paytm
 </span>
 <input type="radio" name="upi">
 </div>
+
 <div class="option">
 <span>
-<img src="qr.png" width="30" style="vertical-align:middle;margin-right:10px;">
+<img src="qr.png"
+width="30"
+style="vertical-align:middle;margin-right:10px;">
 Scan QR Code
 </span>
 <input type="radio" name="upi">
 </div>
 
-<button class="paybtn" onclick="payNow()">
+<button class="paybtn" id="payButton" onclick="payNow()">
 Pay ₹1499
 </button>
 
 <script>
-function payNow(){
-alert("Payment Successful");
-window.location.href="thankyou.html";
+
+/* Product information localStorage se lena */
+
+const savedProduct = localStorage.getItem("selectedProduct");
+
+if(savedProduct){
+
+const product = JSON.parse(savedProduct);
+
+document.getElementById("productImage").src = product.image;
+
+document.getElementById("productName").innerText = product.name;
+
+document.getElementById("productPrice").innerText =
+"₹" + product.price;
+
+document.getElementById("totalAmount").innerText =
+"₹" + product.price;
+
+document.getElementById("payButton").innerText =
+"Pay ₹" + product.price;
+
+document.title = product.name + " - Payments";
+
 }
+
+
+/* Payment button */
+
+function payNow(){
+
+alert("Payment Successful");
+
+window.location.href="thankyou.html";
+
+}
+
 </script>
 
 </body>
