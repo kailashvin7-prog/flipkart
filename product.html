@@ -125,7 +125,7 @@ Offer ends in <span id="countdown">04:59</span>
 Add to Cart
 </button>
 
-<button class="buy" onclick="window.location.href='address.html'">
+<button class="buy" onclick="localStorage.setItem('selectedProduct', JSON.stringify(product)); window.location.href='address.html'">
 Buy Now
 </button>
 
