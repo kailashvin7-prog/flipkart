@@ -159,7 +159,7 @@ Payments
 UPI Payment
 </div>
 
-<div class="option selected" onclick="selectPayment(this)">
+<div class="option" onclick="selectPayment(this)">
 <span>
 <img src="https://download.logo.wine/logo/PhonePe/PhonePe-Logo.wine.png"
 width="35"
@@ -222,7 +222,11 @@ document.title = product.name + " - Payments";
 function selectPayment(selectedOption){
 
     document.querySelectorAll(".option").forEach(function(option){
+
         option.classList.remove("selected");
+
+        option.querySelector('input[type="radio"]').checked = false;
+
     });
 
     selectedOption.classList.add("selected");
