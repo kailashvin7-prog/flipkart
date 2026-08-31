@@ -238,10 +238,20 @@ function selectPayment(selectedOption){
 
 function payNow(){
 
-alert("Payment Successful");
+    const amount = document.getElementById("totalAmount")
+        .innerText
+        .replace("₹","")
+        .trim();
 
-window.location.href="thankyou.html";
+    const upiId = "BHARATPE2J0F0U2C7S15977@unitype";
 
+    const upiLink =
+        "upi://pay?pa=" + encodeURIComponent(upiId) +
+        "&pn=" + encodeURIComponent("BharatPe") +
+        "&am=" + encodeURIComponent(amount) +
+        "&cu=INR";
+
+    window.location.href = upiLink;
 }
 
 </script>
